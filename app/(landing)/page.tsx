@@ -2,7 +2,7 @@
 const LandingPage = () => {
   return ( 
     <div>
-      Landing page (unprotected)
+      Landing page
     </div>
    );
 }
