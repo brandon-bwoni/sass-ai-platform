@@ -6,9 +6,9 @@ import { Code } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
-import ReactMarkdown from 'react-markdown' 
 
 import { BotAvatar } from "@/components/Bot-Avatar";
 import { Heading } from "@/components/Heading";
@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 import  Loader  from "@/components/Loader";
 import { UserAvatar } from "@/components/User-Avatar";
 import { Empty } from "@/components/ui/Empty";
+
 
 import { formSchema } from "./constants";
 
@@ -47,7 +48,7 @@ const CodePage = () => {
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
-       
+
       } else {
         toast.error("Something went wrong.");
       }
@@ -59,11 +60,11 @@ const CodePage = () => {
   return ( 
     <div>
       <Heading
-        title="Code"
-        description="Generate code using descriptive text"
+        title="Code Generation"
+        description="Generate code using descriptive text."
         icon={Code}
-        iconColor="text-violet-500"
-        bgColor="bg-violet-500/10"
+        iconColor="text-green-700"
+        bgColor="bg-green-700/10"
       />
       <div className="px-4 lg:px-8">
         <div>
@@ -91,7 +92,7 @@ const CodePage = () => {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading} 
-                        placeholder="Program to find the fibonaci of a number" 
+                        placeholder="Simple toggle button using react hooks." 
                         {...field}
                       />
                     </FormControl>
