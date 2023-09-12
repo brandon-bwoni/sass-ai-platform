@@ -59,4 +59,4 @@ export async function POST(
     console.log('[IMAGE_ERROR]', error);
     return new NextResponse("Internal Error", { status: 500 });
   }
-};
+}; 
