@@ -19,6 +19,8 @@ This project is a SaaS (Software as a Service) platform that leverages the power
 - **User Authentication**: Utilizes Clerk for user authentication, providing a secure and seamless login experience.
   
 - **API Limit for unsubscribed users**: Utilizes MySQL database to keep track of the number of prompts a user executes as there is a set limit for the number of prompts a user can execute under a free account.
+  
+- **API Limit UI Counter**: An interactive UI progress bar to show the user the amount of free credits they have for a free account
 
 - **Payment Integration**: Integrates with Stripe for subscription-based access to premium features.
 
