@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a cutting-edge SaaS (Software as a Service) platform that leverages the power of artificial intelligence to generate content in various formats, including text-based chats, images, and code snippets. Additionally, it integrates with Replica AI to provide music and video generation capabilities. This project highlights my expertise in working with APIs, building SaaS applications, and utilizing a stack that includes Next.js 13, React, Tailwind CSS, Prisma, Stripe, and Clerk for authentication.
+This project is a SaaS (Software as a Service) platform that leverages the power of artificial intelligence to generate content in various formats, including text-based chats, images, and code snippets. Additionally, it integrates with Replica AI to provide music and video generation capabilities. This project highlights my expertise in working with APIs, building SaaS applications, and utilizing a stack that includes Next.js 13, React, Tailwind CSS, Prisma, Stripe, and Clerk for authentication.
 
 ## Key Features
 
@@ -17,6 +17,8 @@ This project is a cutting-edge SaaS (Software as a Service) platform that levera
 - **AI-Generated Videos**: Integrates with Replica AI to produce video content.
 
 - **User Authentication**: Utilizes Clerk for user authentication, providing a secure and seamless login experience.
+  
+- **API Limit for unsubscribed users**: Utilizes MySQL database to keep track of the number of prompts a user executes as there is a set limit for the number of prompts a user can execute under a free account.
 
 - **Payment Integration**: Integrates with Stripe for subscription-based access to premium features.
 
