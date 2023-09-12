@@ -12,7 +12,9 @@ This project is a cutting-edge SaaS (Software as a Service) platform that levera
 
 - **AI-Generated Code**: Automatically generates code snippets for specific tasks or use cases.
 
-- **AI-Generated Music and Videos**: Integrates with Replica AI to produce music tracks and video content.
+- **AI-Generated Music**: Integrates with Replica AI to produce music tracks.
+  
+- **AI-Generated Videos**: Integrates with Replica AI to produce video content.
 
 - **User Authentication**: Utilizes Clerk for user authentication, providing a secure and seamless login experience.
 
