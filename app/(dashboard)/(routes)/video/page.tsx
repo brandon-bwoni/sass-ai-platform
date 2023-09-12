@@ -4,7 +4,7 @@ import * as z from "zod";
 import axios from "axios";
 import { VideoIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
@@ -34,22 +34,25 @@ const VideoPage = () => {
   
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      setVideo(undefined)
+      setVideo(undefined);
 
-      const response = await axios.post('/api/video', values);
-      
-      setVideo(response.data[0])
+      if(typeof window !== 'undefined'){
+        const response = await axios.post('/api/video', values);
+  
+      setVideo(response.data[0]);
       form.reset();
+      }
     } catch (error: any) {
       if (error?.response?.status === 403) {
-    
+      
       } else {
         toast.error("Something went wrong.");
       }
     } finally {
       router.refresh();
     }
-  }
+  };
+  
 
   return ( 
     <div>
